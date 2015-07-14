@@ -17,22 +17,94 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>     
+  <body>  
+		
 	<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#Abstract">Abstract</a></li>  
+				<li><a href="#DataCollection">Data Collection</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+		
+		<!-- Start Body-->
 		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Language Localisation of Tamil using Statistical Machine Translation</a>
-			</div>
-			<div>
-				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Page 1</a></li>
-					<li><a href="#">Page 2</a></li>
-					<li><a href="#">Page 3</a></li>
-				</ul>
+			<div >
+				<section id="Abstract">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Abstract</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-6">
+									<p class="text-justify">
+							Localisation of software has a lot of potential as now all the software vendors like to have their software in different languages. However, the language localisation, where the strings in interface are translated to another language, is a rigorous and time consuming task. 
+									</p>
+									<p class="text-justify">
+									This research proposes a methodology and identifies suitable parameters using which a Statistical Machine Translation aided localisation system can be built. A pilot system is also successfully built with a RESTful API to do the software localisation, this system is outlined in this paper. The usual Statistical Machine Translation (SMT) process is adapted for this system. 
+									</p>
+								</div>
+								<div class="col-md-6">
+									<p class="text-justify">
+									Technical data are collected from various open source software language resource files and then they are cleaned, tokenised and the system is trained with that. Another system is trained with a generic data apart from the collected technical data. System is also trained with 2-gram, 3-gram and 4-gram language models. And using two different language modelling tools namely KenLM and IRSTLM. Then the results were evaluated using BLEU algorithm. Appropriate parameters for setting up Statistical Machine Translation system for localisation were identified. The results show that it would be enough to train a system with 3-gram, and the modified BLEU algorithm will give better understanding of the results compare to the original implementation. Further, among KenLM and IRSTM, KenLM performs better in terms of accuracy of results and speed of execution. 
+									</p>
+								</div>
+							</div>
+    				</div>
+					</div>
+				</section>	
+				
+				
+				<section id="DataCollection">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Data Collection</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-6">
+								<p class="text-justify">
+									Data are collected from language resource files of different open source projects as those have localised to Tamil. The parallel data, English phrases and corresponding Tamil phrases, collected from language resource files are used as training data and as testing data.  Amount of collected data are shown in Table 1. 
+								</p>
+								<p class="text-justify">
+									In the succeeding sub phases, data are cleaned and prepared for training. Two system were built, and one was trained using all the data shown in Table 1, here after refereed as generic corpus, and other one was trained only with the technical data, which means without the EnTam v2.0; because, EnTam v2.0 is a general purpose corpus where most of the phrases are none technical phrases. The steps outlined here are followed for both systems.
+								</p>
+								</div>
+								<div class="col-md-6">
+								<table class="table table-hover">
+								<tr> 
+									<th>Source</th>
+									<th>Sentences (No. of phrases)</th>
+								</tr> 
+								<tr><td>Mozilla Firefox</td><td>4568</td></tr>	
+								<tr><td>Mozilla OS</td><td>3465</td></tr>	
+								<tr><td>Joomla</td><td>4358</td></tr>	
+								<tr><td>Drupal</td><td>4544</td></tr> 	
+								<tr><td>Moodle</td><td>4355</td></tr>	
+								<tr><td>Squirrel Mail</td><td>1116</td></tr>	
+								<tr><td>Tamil Glossary</td><td>2567</td></tr>	
+								<tr><td>EnTam v2.0 [2]</td><td>169871</td></tr> 
+  							</table>
+								</div>
+							</div>
+    				</div>
+					</div>
+				</section>	
 			</div>
 		</div>
-	</nav>
+		<!-- End Body-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
