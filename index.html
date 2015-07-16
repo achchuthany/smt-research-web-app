@@ -9,7 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+	<!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,7 +20,7 @@
   </head>
   <body>  
 		
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -29,7 +30,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#">SMT</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,35 +42,40 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-		
+		<!-- Full Width Image Header -->
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+
+                <h2>Language Localisation of Tamil using Statistical Machine Translation</h2>
+            </div>
+        </div>
+    </header>
 		<!-- Start Body-->
 		<div class="container">
-			<div >
-				<section id="Abstract">
-					<div class="panel panel-primary">
+			<div class="body">
+			<hr class="featurette-divider">
+				<section id="Abstract" class="featurette">
+				    <div class="panel panel-primary">
 						<div class="panel-heading">Abstract</div>
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-md-6">
-									<p class="text-justify">
-							Localisation of software has a lot of potential as now all the software vendors like to have their software in different languages. However, the language localisation, where the strings in interface are translated to another language, is a rigorous and time consuming task. 
-									</p>
-									<p class="text-justify">
-									This research proposes a methodology and identifies suitable parameters using which a Statistical Machine Translation aided localisation system can be built. A pilot system is also successfully built with a RESTful API to do the software localisation, this system is outlined in this paper. The usual Statistical Machine Translation (SMT) process is adapted for this system. 
-									</p>
-								</div>
-								<div class="col-md-6">
-									<p class="text-justify">
-									Technical data are collected from various open source software language resource files and then they are cleaned, tokenised and the system is trained with that. Another system is trained with a generic data apart from the collected technical data. System is also trained with 2-gram, 3-gram and 4-gram language models. And using two different language modelling tools namely KenLM and IRSTLM. Then the results were evaluated using BLEU algorithm. Appropriate parameters for setting up Statistical Machine Translation system for localisation were identified. The results show that it would be enough to train a system with 3-gram, and the modified BLEU algorithm will give better understanding of the results compare to the original implementation. Further, among KenLM and IRSTM, KenLM performs better in terms of accuracy of results and speed of execution. 
-									</p>
+								<div class="col-md-10 col-md-offset-1">
+								 
+									<p class="text-justify text-normal">
+Language localisation, where the strings in interface and documentation are translated to a new language, is a rigorous and time consuming task. On the other hand machine translation systems, specifically Statistical Machine Translation (SMT) systems, are successfully used among many language pairs. However, still there are no SMT systems have been developed to translate any languages to Tamil or vice versa with reportable results. This research proposes a new methodology in which language localisation can be done using SMT.									</p>
+									
+								<p class="text-justify">
+This research also identifies suitable parameters using which a SMT aided localisation system can be built. A pilot system is developed and the system is also outlined in this paper.  A RESTful API is also has been developed to facilitate localisation in remote tools. Already there are several open source software have been translated to Tamil and those translated English – Tamil pairs were collected from various language resource files and then those are cleaned, tokenised and the system was trained using them. Another similar system is prepared with a data from generic domain apart from the collected technical data. Systems were trained with 2-gram, 3-gram and 4-gram language models that are created using two different language modelling tools namely KenLM and IRSTLM. Then the results were evaluated using BLEU algorithm. Appropriate parameters for setting up SMT system for localisation were identified from the evaluation. The results show that it would be enough to train a system with 3-gram, and the modified BLEU algorithm will give better understanding of the results compare to the original implementation of it. Further, among KenLM and IRSTM, KenLM performs better in terms of accuracy of results and the speed of execution.  									</p>
+								
 								</div>
 							</div>
     				</div>
 					</div>
 				</section>	
 				
-				
-				<section id="DataCollection">
+				<hr class="featurette-divider">
+				<section id="DataCollection" class="featurette">
 					<div class="panel panel-primary">
 						<div class="panel-heading">Data Collection</div>
 						<div class="panel-body">
@@ -83,6 +89,7 @@
 								</p>
 								</div>
 								<div class="col-md-6">
+								<p class="text-center">TABLE 1 : COLLECTED DATA FROM THE INTERNET</P>
 								<table class="table table-hover">
 								<tr> 
 									<th class="col-md-6">Source</th>
@@ -105,7 +112,7 @@
 			</div>
 		</div>
 		<!-- End Body-->
-		
+		<hr class="featurette-divider">
 		
 		<footer class="footer">
       <div class="container">
